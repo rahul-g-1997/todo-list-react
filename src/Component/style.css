@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+/* -------container -------*/
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 1px;
+  background-color: #9e9e9e;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.todo-app {
+  max-width: 700px;
+  background: #9e9e9e;
+  box-shadow: 7px 7px 14px #3f3f3f,
+    -7px 0px 14px #fdfdfd;
+  margin: 57px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 15px;
+}
+
+.todo-app h2 {
+  display: flex;
+  color: rgb(0, 0, 0);
+  align-items: center;
+  margin-bottom: 21px;
+  justify-content: center;
+  background: #9e9e9e;
+}
+
+.todo-app h2 img {
+  width: 30px;
+  margin-left: 10px;
+  background: #9e9e9e;
+}
+
+.binder{
+  background-color: #9e9e9e;
+  width: 75%;
+  margin-left: 13%;
+  margin-top: -90px;
+}
+/*------- input box -------*/
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+input {
+  position: relative;
+  flex: 1;
+  border: none;
+  outline: none;
+  background: white;
+  padding: 10px;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 10px 30px;
+  background: #000000;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+/* -------styling on mid -------*/
+.mid {
+  display: flex;
+  font-size: 1.2rem;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  background: #9e9e9e;
+  justify-content: space-around;
+}
+
+/*-------styling on todo list ------- */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: inherit;
+  align-items: center;
+  background: #9e9e9e;
+}
+
+ul li:hover {
+  background: rgb(255, 255, 255);
+}
+
+#list input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+#list label {
+  position: relative;
+  cursor: pointer;
+  background: transparent;
+}
+
+#list label:before {
+  content: '';
+  background-color: transparent;
+  border: 2px solid #000000;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#list input:checked+label:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 9px;
+  width: 6px;
+  height: 14px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+#list input:checked+label:before {
+  background: #000000;
+}
+
+#list input:checked+label {
+  text-decoration: line-through;
+}
+
+.deleteedit{
+  background-color: transparent;
+}
+
+.delete {
+  height: 25px;
+  padding: 5px 0px;
+  background-color: transparent;
+}
+
+.delete:hover {
+  cursor: pointer;
+}
+
+.edit {
+  height: 25px;
+  padding: 5px 0px;
+  border-radius: 3px;
+  margin-right: 10px;
+  background-color: transparent;
+}
+
+.edit:hover {
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+}
+
+.add-task {
+  width: 100%;
+  outline: none;
+  font-size: 15px;
+  padding: 11px;
+  border: 1px solid #f3f3f3;
+  margin-bottom: 3px;
+}
+
+#total-tasks {
+  margin-bottom: 20px;
+  font-size: 13px;
+  margin-left: 2px;
+  color: rgb(0, 0, 0);
+}
+
+/*-------dropdown-------*/
+.filters {
+  background: #9e9e9e;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dropbtn {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 7px 7px 14px #3f3f3f,
+    -7px -7px 14px #fdfdfd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background: #9e9e9e;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.count {
+  margin-left: 37%;
+  background: #9e9e9e;
+  display: flex;
+  justify-content: space-between;
+}
+
+.count span {
+
+  background: #9e9e9e;
+}
